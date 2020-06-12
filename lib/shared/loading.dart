@@ -25,6 +25,8 @@ class Loading extends StatelessWidget {
         image: DecorationImage(
             fit: BoxFit.cover, image: AssetImage('assets/background15.jpg')),
       ),
+
+
       child: Center(
         child: SpinKitChasingDots(
           color: Colors.teal,
