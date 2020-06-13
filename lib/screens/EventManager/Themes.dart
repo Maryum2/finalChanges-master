@@ -101,7 +101,7 @@ class _ThemesState extends State<Themes> {
                               style: TextStyle(
                                   fontSize: 20.0,
                                   fontWeight: FontWeight.bold,
-                              color: Colors.teal),
+                              color: Colors.white),
                             ):Container(
                               child: new ListView.builder(
                                 itemCount: managerData.themes.length,

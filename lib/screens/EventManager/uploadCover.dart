@@ -137,63 +137,74 @@ class _UploadCoverPageState extends State<UploadCoverPage> {
           return loading ? Loading()
               : new MaterialApp(
               debugShowCheckedModeBanner: false,
-              home:Scaffold(
-            appBar: new AppBar(
-              title: new Text('Upload Image'),
-              centerTitle: true,
-              backgroundColor: Colors.teal,
-              elevation: 0.0,
-            ),
+                home:Scaffold(
+                  appBar: new AppBar(
+                    title: new Text('Upload Image'),
+                    centerTitle: true,
+                    backgroundColor: Colors.teal,
+                    elevation: 0.0,
+                    leading: IconButton(
+                      onPressed: () {
+                        //Navigator.of(context).pop();
+                        Navigator.push(
+                            context, MaterialPageRoute(builder: (context) {
+                          return View();
+                        }));
+                      },
+                      icon: Icon(Icons.arrow_back),
+                    ),
+                  ),
             body:
-            SingleChildScrollView(
-              child: Container(
-                decoration: new BoxDecoration(
-                  image: DecorationImage(
-                      fit: BoxFit.cover,
-                      image: AssetImage('assets/background15.jpg')),
-                ),
-                child: Column(
-                  children: <Widget>[
+                  SingleChildScrollView(
+                    child: Container(
+                      height:651.0,
+                      decoration: new BoxDecoration(
+                        image: DecorationImage(
+                            fit: BoxFit.cover,
+                            image: AssetImage('assets/background15.jpg')),
+                      ),
+                      child: Column(
+                        children: <Widget>[
 
-                    sampleImage == null ?
-                    Column(
-                      children: <Widget>[
-                        SizedBox(height: 300,),
-                        new Center(
-                          child: Text('Select an image'),
-                        ),
-                        SizedBox(height: 265,),
-                        RaisedButton(
-                          //color: Colors.teal[400],
-                            shape: new RoundedRectangleBorder(
-                              borderRadius: new BorderRadius.circular(15.0),
-                              side: BorderSide(
-                                color: Colors.teal, //Color of the border
-                                style: BorderStyle.solid, //Style of the border
-                                width: 1.0, //width of the border
+                          sampleImage == null ?
+                          Column(
+                            children: <Widget>[
+                              SizedBox(height: 300,),
+                              new Center(
+                                child: Text('Select an image'),
                               ),
-                            ),
-                            child: Text(
-                              'Select',
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 20.0,
-                                  color: Colors.white),
-                            ),
-                            elevation: 20.0,
-                            //splashColor: Colors.black12,
-                            color: Colors.teal,
-                            onPressed: () {
-                              _showDialog1(context);
-                            }),
+                              SizedBox(height: 265,),
+                              RaisedButton(
+                                //color: Colors.teal[400],
+                                  shape: new RoundedRectangleBorder(
+                                    borderRadius: new BorderRadius.circular(15.0),
+                                    side: BorderSide(
+                                      color: Colors.teal, //Color of the border
+                                      style: BorderStyle.solid, //Style of the border
+                                      width: 1.0, //width of the border
+                                    ),
+                                  ),
+                                  child: Text(
+                                    'Select',
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 20.0,
+                                        color: Colors.white),
+                                  ),
+                                  elevation: 20.0,
+                                  //splashColor: Colors.black12,
+                                  color: Colors.teal,
+                                  onPressed: () {
+                                    _showDialog1(context);
+                                  }),
 
-                      ],
-                    )
-                        : enableUpload()
-                  ],
-                ),
-              ),
-            ),
+                            ],
+                          )
+                              : enableUpload()
+                        ],
+                      ),
+                    ),
+                  ),
           ));
 
 

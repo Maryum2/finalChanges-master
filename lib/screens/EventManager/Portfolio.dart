@@ -133,16 +133,25 @@ class _PortfolioState extends State<Portfolio> {
     return loading ? Loading()
         : new MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: Scaffold(
-      appBar: new AppBar(
-        title: new Text('Upload Image'),
-        centerTitle: true,
-        backgroundColor: Colors.teal,
-        elevation: 0.0,
-      ),
+          home: Scaffold(
+            appBar: new AppBar(
+              title: new Text('Upload Image'),
+              centerTitle: true,
+              backgroundColor: Colors.teal,
+              elevation: 0.0,
+              leading:IconButton(
+                onPressed: (){
+                  //Navigator.of(context).pop();
+                  Navigator.pushReplacement(context,MaterialPageRoute(builder: (BuildContext context) => View()));
+                },
+                icon: Icon(Icons.arrow_back),
+              ),
+
+            ),
       body:
       SingleChildScrollView(
         child: Container(
+          height:651.0,
           decoration: new BoxDecoration(
             image: DecorationImage(
                 fit: BoxFit.cover,

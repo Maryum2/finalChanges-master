@@ -87,7 +87,7 @@ class _ServicesState extends State<Services> {
                         style: TextStyle(
                             fontSize: 20.0,
                             fontWeight: FontWeight.bold,
-                        color: Colors.teal),
+                        color: Colors.white),
                       ):Container(
                         child: new ListView.builder(
                           itemCount: managerData.services.length,

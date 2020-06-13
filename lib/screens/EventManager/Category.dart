@@ -101,7 +101,7 @@ class _CategoriesState extends State<Categories> {
                             style: TextStyle(
                                 fontSize: 20.0,
                                 fontWeight: FontWeight.bold,
-                            color: Colors.teal),
+                            color: Colors.white),
                           ):Container(
                             child: new ListView.builder(
                               itemCount: managerData.categories.length,

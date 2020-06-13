@@ -57,355 +57,355 @@ class _ProfilePageState extends State<ProfilePage> {
         ),
 
       ),
-      body: Container(
-        child: Image(
-          image: NetworkImage(image),
-          fit: BoxFit.fill,
-        ),
-      ),
-    );
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    return new MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: Scaffold(
-      appBar: new AppBar(
-        title: new Text('Penta Events'),
-        backgroundColor: Colors.teal,
-      ),
-
-
-      body:  Container(
-          decoration: new BoxDecoration(
-            image: DecorationImage(
-                fit: BoxFit.cover,
-                image: AssetImage('assets/background15.jpg')),
+          body: Container(
+            child: Image(
+              image: NetworkImage(image),
+              fit: BoxFit.fill,
+            ),
           ),
+        );
+      }
 
-          child:new ListView(
-            children: <Widget>[
-              new Column(
-              children: <Widget>[
-
-                Stack(
-                children: <Widget>[
-                  Row(
-                    children: <Widget>[
-                      Expanded(
-                          child: Container(
-                            height: 230.0,
-                            decoration: BoxDecoration(
-                              image: DecorationImage(
-                                fit: BoxFit.cover,
-                                image:
-                                new CachedNetworkImageProvider(
-                                  widget.document.data['Event_Cover'],
-                                ),),
-                            ),
-                          )
-                      )
-                    ],
-                  ),
-                  Positioned(
-                    top: 130.0,
-                    child: Container(
-                      height: 95.0,
-                      width: 95.0,
-                      decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          image: DecorationImage(
-                            fit: BoxFit.fill,
-                            image:
-                            new CachedNetworkImageProvider(
-                              widget.document.data['Event_Logo'],
-                            ),),
-                          border:
-                          Border.all(color: Colors.white, width: 3.0)),
-                    ),
-                  ),
-                ],
+      @override
+      Widget build(BuildContext context) {
+        // TODO: implement build
+        return new MaterialApp(
+            debugShowCheckedModeBanner: false,
+            home: Scaffold(
+              appBar: new AppBar(
+                title: new Text('Penta Events'),
+                backgroundColor: Colors.teal,
               ),
 
-                  Container(
-                    height: 60,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        Text(widget.document.data['Event_orgName'],
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 25.0,color: Colors.white))
-                      ],
-                    ),
-                  ),
-                SizedBox(
-                  height: 10.0,
-                ),
-                Container(
-                  padding: EdgeInsets.only(left: 10.0),
-                  child: Column(
+
+          body:  Container(
+              decoration: new BoxDecoration(
+                image: DecorationImage(
+                    fit: BoxFit.cover,
+                    image: AssetImage('assets/background15.jpg')),
+              ),
+
+              child:new ListView(
+                children: <Widget>[
+                  new Column(
+                  children: <Widget>[
+
+                    Stack(
                     children: <Widget>[
                       Row(
                         children: <Widget>[
-                          Icon(Icons.location_on,
-                            size: 20.0,),
-                          SizedBox(
-                            width: 5.0,
-                          ),
-                          Text(widget.document.data['Event_address'],
-                            style: TextStyle(fontSize: 16.0),
-                          )
-                        ],
-                      )
-                    ],
-                  ),
-                ),
-                SizedBox(
-                  height: 10.0,
-                ),
-                Container(
-                  padding: EdgeInsets.only(left: 10.0),
-                  child: Column(
-                    children: <Widget>[
-                      Row(
-                        children: <Widget>[
-                          Icon(Icons.phone,size: 20.0,),
-                          SizedBox(
-                            width: 5.0,
-                          ),
-                          Text(widget.document.data['Event_phone'],
-                            style: TextStyle(fontSize: 16.0),
-                          )
-                        ],
-                      )
-                    ],
-                  ),
-                ),
-                SizedBox(
-                  height: 10.0,
-                ),
-                Container(
-                  padding: EdgeInsets.only(left: 10.0),
-                  child: Column(
-                    children: <Widget>[
-                      Row(
-                        children: <Widget>[
-                          Icon(Icons.mail,size: 20.0,),
-                          SizedBox(
-                            width: 5.0,
-                          ),
-                          Text(widget.document.data['Event_email'],
-                            style: TextStyle(fontSize: 16.0),
-                          )
-                        ],
-                      )
-                    ],
-                  ),
-                ),
-                SizedBox(
-                  height: 10.0,
-                ),
-                Container(
-                  padding: EdgeInsets.only(left: 10.0),
-                  child: Column(
-                    children: <Widget>[
-                      Row(
-                        children: <Widget>[
-                          Icon(Icons.access_time,size: 20.0,),
-                          SizedBox(
-                            width: 5.0,
-                          ),
-                          Text('9:00 AM - 5:00 PM',
-                            style: TextStyle(fontSize: 16.0),
-                          )
-                        ],
-                      )
-                    ],
-                  ),
-                ),
-                SizedBox(
-                  height: 10.0,
-                ),
-                Container(
-                  padding: EdgeInsets.only(left: 10.0),
-                  child: Column(
-                    children: <Widget>[
-                      Row(
-                        children: <Widget>[
-                          Icon(Icons.location_city,size: 20.0,),
-                          SizedBox(
-                            width: 5.0,
-                          ),
-                          Text(widget.document.data['Event_serving_areas'],
-                            style: TextStyle(fontSize: 16.0),
+                          Expanded(
+                              child: Container(
+                                height: 230.0,
+                                decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                    fit: BoxFit.cover,
+                                    image:
+                                    new CachedNetworkImageProvider(
+                                      widget.document.data['Event_Cover'],
+                                    ),),
+                                ),
+                              )
                           )
                         ],
                       ),
+                      Positioned(
+                        top: 130.0,
+                        child: Container(
+                          height: 95.0,
+                          width: 95.0,
+                          decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              image: DecorationImage(
+                                fit: BoxFit.fill,
+                                image:
+                                new CachedNetworkImageProvider(
+                                  widget.document.data['Event_Logo'],
+                                ),),
+                              border:
+                              Border.all(color: Colors.white, width: 3.0)),
+                        ),
+                      ),
                     ],
                   ),
-                ),
-                Container(
-                  height: 12.0,
-                  child: Divider(
-                    color: Colors.grey,
-                  ),
-                ),
-                Container(
-                    padding: EdgeInsets.all(7.0),
-                    alignment: Alignment.topLeft,
-                    child: Column(
-                      children: <Widget>[
-                        Container(
-                            margin: EdgeInsets.all(1.0),
-                            alignment: Alignment.topLeft,
-                            child: Text("Description",
-                                style: TextStyle(
-                                  fontSize: 25.0,
-                                  fontWeight: FontWeight.bold,
-                                ))),
 
-                        Container(
+                      Container(
+                        height: 60,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            Text(widget.document.data['Event_orgName'],
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold, fontSize: 25.0,color: Colors.white))
+                          ],
+                        ),
+                      ),
+                    SizedBox(
+                      height: 10.0,
+                    ),
+                    Container(
+                      padding: EdgeInsets.only(left: 10.0),
+                      child: Column(
+                        children: <Widget>[
+                          Row(
+                            children: <Widget>[
+                              Icon(Icons.location_on,
+                                size: 20.0,),
+                              SizedBox(
+                                width: 5.0,
+                              ),
+                              Text(widget.document.data['Event_address'],
+                                style: TextStyle(fontSize: 16.0),
+                              )
+                            ],
+                          )
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10.0,
+                    ),
+                    Container(
+                      padding: EdgeInsets.only(left: 10.0),
+                      child: Column(
+                        children: <Widget>[
+                          Row(
+                            children: <Widget>[
+                              Icon(Icons.phone,size: 20.0,),
+                              SizedBox(
+                                width: 5.0,
+                              ),
+                              Text(widget.document.data['Event_phone'],
+                                style: TextStyle(fontSize: 16.0),
+                              )
+                            ],
+                          )
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10.0,
+                    ),
+                    Container(
+                      padding: EdgeInsets.only(left: 10.0),
+                      child: Column(
+                        children: <Widget>[
+                          Row(
+                            children: <Widget>[
+                              Icon(Icons.mail,size: 20.0,),
+                              SizedBox(
+                                width: 5.0,
+                              ),
+                              Text(widget.document.data['Event_email'],
+                                style: TextStyle(fontSize: 16.0),
+                              )
+                            ],
+                          )
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10.0,
+                    ),
+                    Container(
+                      padding: EdgeInsets.only(left: 10.0),
+                      child: Column(
+                        children: <Widget>[
+                          Row(
+                            children: <Widget>[
+                              Icon(Icons.access_time,size: 20.0,),
+                              SizedBox(
+                                width: 5.0,
+                              ),
+                              Text('9:00 AM - 5:00 PM',
+                                style: TextStyle(fontSize: 16.0),
+                              )
+                            ],
+                          )
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10.0,
+                    ),
+                    Container(
+                      padding: EdgeInsets.only(left: 10.0),
+                      child: Column(
+                        children: <Widget>[
+                          Row(
+                            children: <Widget>[
+                              Icon(Icons.location_city,size: 20.0,),
+                              SizedBox(
+                                width: 5.0,
+                              ),
+                              Text(widget.document.data['Event_serving_areas'],
+                                style: TextStyle(fontSize: 16.0),
+                              )
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      height: 12.0,
+                      child: Divider(
+                        color: Colors.grey,
+                      ),
+                    ),
+                    Container(
+                        padding: EdgeInsets.all(7.0),
+                        alignment: Alignment.topLeft,
+                        child: Column(
+                          children: <Widget>[
+                            Container(
+                                margin: EdgeInsets.all(1.0),
+                                alignment: Alignment.topLeft,
+                                child: Text("Description",
+                                    style: TextStyle(
+                                      fontSize: 25.0,
+                                      fontWeight: FontWeight.bold,
+                                    ))),
+
+                            Container(
+                                margin: EdgeInsets.all(1.0),
+                                alignment: Alignment.topLeft,
+                                child:widget.document.data['Description']==null?
+                                Text('No Description!',
+                                  style: TextStyle(
+                                      fontSize: 17.0,
+                                      fontStyle: FontStyle.italic
+                                  ),
+                                )
+                                    :Text(widget.document.data['Description'],
+                                  style: TextStyle(
+                                    fontSize: 16.0,
+
+                                  ),
+                                )
+                            ),
+                          ],
+                        )
+                    ),
+                    Container(
+                      height: 12.0,
+                      child: Divider(
+                        color: Colors.grey,
+                      ),
+                    ),
+                    Container(
+                      padding: EdgeInsets.all(7.0),
+                      //alignment: Alignment.topLeft,
+                      child: Column(
+                        children: <Widget>[
+                          Row(
+                            children: <Widget>[
+                              Text(
+                                "Porfolio",
+                                style: TextStyle(
+                                    fontSize: 25.0,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            ],
+                          ),
+                          Container(
                             margin: EdgeInsets.all(1.0),
                             alignment: Alignment.topLeft,
-                            child:widget.document.data['Description']==null?
-                            Text('No Description',
+                            child: widget.document.data['Event_portfolio'].length==0? Text(
+                              "No Portfolio Yet! ",
                               style: TextStyle(
                                   fontSize: 17.0,
                                   fontStyle: FontStyle.italic
+                                //fontWeight: FontWeight.bold
                               ),
-                            )
-                                :Text(widget.document.data['Description'],
-                              style: TextStyle(
-                                fontSize: 16.0,
-
+                            ) :     Center(
+                              child: Container(
+                                //height: 300.0,
+                                child: new GridView.extent(
+                                  scrollDirection: Axis.vertical,
+                                  shrinkWrap: true,
+                                  maxCrossAxisExtent: 150.0,
+                                  mainAxisSpacing: 5.0,
+                                  crossAxisSpacing: 5.0,
+                                  padding: const EdgeInsets.all(5.0),
+                                  children: _buildGridTiles(widget.document.data['Event_portfolio']),//Where is this function ?
+                                ),
                               ),
-                            )
-                        ),
-                      ],
-                    )
-                ),
-                Container(
-                  height: 12.0,
-                  child: Divider(
-                    color: Colors.grey,
-                  ),
-                ),
-                Container(
-                  padding: EdgeInsets.all(7.0),
-                  //alignment: Alignment.topLeft,
-                  child: Column(
-                    children: <Widget>[
-                      Row(
-                        children: <Widget>[
-                          Text(
-                            "Porfolio",
-                            style: TextStyle(
-                                fontSize: 25.0,
-                                fontWeight: FontWeight.bold),
-                          ),
-                        ],
-                      ),
-                      Container(
-                        margin: EdgeInsets.all(1.0),
-                        alignment: Alignment.topLeft,
-                        child: widget.document.data['Event_portfolio'].length==0? Text(
-                          "No Portfolio Yet! ",
-                          style: TextStyle(
-                              fontSize: 17.0,
-                              fontStyle: FontStyle.italic
-                            //fontWeight: FontWeight.bold
-                          ),
-                        ) :     Center(
-                          child: Container(
-                            //height: 300.0,
-                            child: new GridView.extent(
-                              scrollDirection: Axis.vertical,
-                              shrinkWrap: true,
-                              maxCrossAxisExtent: 150.0,
-                              mainAxisSpacing: 5.0,
-                              crossAxisSpacing: 5.0,
-                              padding: const EdgeInsets.all(5.0),
-                              children: _buildGridTiles(widget.document.data['Event_portfolio']),//Where is this function ?
                             ),
                           ),
-                        ),
-                      ),
 
-                    ],
-                  ),
-                ),
-                Container(
-                  height: 15.0,
-                  child: Divider(
-                    color: Colors.grey,
-                  ),
-                ),
-                Container(
-                  padding: EdgeInsets.all(7.0),
-
-                  child: Column(
-                    children: <Widget>[
-                      Container(
-                        alignment: Alignment.topLeft,
-                        child: Text(
-                          "Customers",
-                          style: TextStyle(fontSize: 25.0,
-                              fontWeight: FontWeight.bold),
-                        ),
+                        ],
                       ),
-                      Container(
-                        margin: EdgeInsets.all(1.0),
-                        alignment: Alignment.topLeft,
-                        child: widget.document.data['Event_customers'].length==0?
-                        Text("No Customers Yet!",
-                          style: TextStyle(
-                              fontSize: 17.0,
-                              fontStyle: FontStyle.italic
-                            //fontWeight: FontWeight.bold
+                    ),
+                    Container(
+                      height: 15.0,
+                      child: Divider(
+                        color: Colors.grey,
+                      ),
+                    ),
+                    Container(
+                      padding: EdgeInsets.all(7.0),
+
+                      child: Column(
+                        children: <Widget>[
+                          Container(
+                            alignment: Alignment.topLeft,
+                            child: Text(
+                              "Customers",
+                              style: TextStyle(fontSize: 25.0,
+                                  fontWeight: FontWeight.bold),
+                            ),
                           ),
-                        ):Container(
-                          child: new ListView.builder(
-                            scrollDirection: Axis.vertical,
-                            shrinkWrap: true,
-                            itemCount:widget.document.data['Event_customers'].length,
-                            itemBuilder: (BuildContext context, int index) {
-                              return new Column(
-                                children: <Widget>[
-                                  Row(
-                                    //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          Container(
+                            margin: EdgeInsets.all(1.0),
+                            alignment: Alignment.topLeft,
+                            child: widget.document.data['Event_customers'].length==0?
+                            Text("No Customers Yet!",
+                              style: TextStyle(
+                                  fontSize: 17.0,
+                                  fontStyle: FontStyle.italic
+                                //fontWeight: FontWeight.bold
+                              ),
+                            ):Container(
+                              child: new ListView.builder(
+                                scrollDirection: Axis.vertical,
+                                shrinkWrap: true,
+                                itemCount:widget.document.data['Event_customers'].length,
+                                itemBuilder: (BuildContext context, int index) {
+                                  return new Column(
                                     children: <Widget>[
-                                      SizedBox(width: 5.0,),
-                                      Icon(Icons.arrow_right),
-                                      Text(widget.document.data['Event_customers'][index],
-                                        style: TextStyle(
-                                          fontSize: 15.0,
-                                          //fontWeight: FontWeight.bold
-                                        ),),
+                                      Row(
+                                        //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                        children: <Widget>[
+                                          SizedBox(width: 5.0,),
+                                          Icon(Icons.arrow_right),
+                                          Text(widget.document.data['Event_customers'][index],
+                                            style: TextStyle(
+                                              fontSize: 15.0,
+                                              //fontWeight: FontWeight.bold
+                                            ),),
+                                        ],
+                                      ),
+
                                     ],
-                                  ),
-
-                                ],
-                              );
-                            },
-                          ),
-                        ),
-                      )
+                                  );
+                                },
+                              ),
+                            ),
+                          )
 
 
-                    ],
-                  ),
-                ),
+                        ],
+                      ),
+                    ),
 
 
 
 
 
-          ],)
-]
-          )
-          )
+              ],)
+    ]
+              )
+              )
     ));
   }
 }

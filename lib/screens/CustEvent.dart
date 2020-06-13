@@ -29,14 +29,14 @@ class CustEvent extends StatelessWidget {
             resizeToAvoidBottomPadding: false,
             appBar: AppBar(
               title: Text("LogIn"),
-              leading: IconButton(
-                onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) {
-                    return MyWelcome();
-                  }));
-                },
-                icon: Icon(Icons.arrow_back),
-              ),
+//              leading: IconButton(
+//                onPressed: () {
+//                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+//                    return MyWelcome();
+//                  }));
+//                },
+//                icon: Icon(Icons.arrow_back),
+//              ),
               backgroundColor: Colors.teal,
             ),
             body: Container(
@@ -53,7 +53,7 @@ class CustEvent extends StatelessWidget {
                             EdgeInsets.only(top: 240.0, left: 25.0, right: 25.0,),
                             // alignment:Alignment.bottomCenter,
                             // margin:  EdgeInsets.all(4.0),
-                            height: 55.0,
+                            height: 60.0,
                             width: 225.0,
                             child: RaisedButton(
                               shape: new RoundedRectangleBorder(
