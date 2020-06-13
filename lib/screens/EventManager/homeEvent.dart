@@ -106,7 +106,7 @@ class _HomePageState extends State<HomePage> {
                           child: new CircleAvatar(
                             backgroundImage: managerData.logo == 'logo'
                                 ? AssetImage('assets/logo1.jpg')
-                                : NetworkImage(managerData.logo),
+                                :  new CachedNetworkImageProvider(managerData.logo),
                           ),
                         ),
                       ),

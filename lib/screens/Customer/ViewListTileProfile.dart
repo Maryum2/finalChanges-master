@@ -86,6 +86,7 @@ class _ProfilePageState extends State<ProfilePage> {
               ),
 
               child:new ListView(
+                  physics: BouncingScrollPhysics(),
                 children: <Widget>[
                   new Column(
                   children: <Widget>[

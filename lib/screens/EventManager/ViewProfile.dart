@@ -193,6 +193,7 @@ class _MyEvents extends State<MyEvents> {
                   ),
 
                   child: new ListView(
+                    physics: BouncingScrollPhysics(),
                     children: <Widget>[
                       new Column(
                         children: <Widget>[

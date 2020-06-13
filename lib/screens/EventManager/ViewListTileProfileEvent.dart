@@ -490,7 +490,10 @@ class _ProfilePageState extends State<ProfilePage> {
                       image: AssetImage('assets/background15.jpg')),
                 ),
 
-                child:new ListView(
+                child:
+
+                new ListView(
+                    physics: BouncingScrollPhysics(),
                     children: <Widget>[
                       new Column(
                         children: <Widget>[

@@ -15,6 +15,7 @@ import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:email_validator/email_validator.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:shimmer/shimmer.dart';
 
 
 void main() {
@@ -586,12 +587,19 @@ class _RegisterAsEventManagerState extends State<RegisterAsEventManager> {
                               width: 2.0, //width of the border
                             ),
                           ),
+                          child:Shimmer.fromColors(
+                              period: Duration(milliseconds: 1500),
+                              baseColor: Colors.white,
+                              highlightColor: Colors.tealAccent,
+
                           child: Text(
                             'Sign Up',
                             style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 20.0,
+                                fontFamily:'Pacifico',
                                 color: Colors.white),
+                          ),
                           ),
                           elevation: 10.0,
                           //splashColor: Colors.black12,

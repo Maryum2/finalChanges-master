@@ -97,6 +97,7 @@ class _CategoriesState extends State<Categories> {
                         ),
                         child:new Center(
                           child: managerData.categories.length==0?
+
                           Text("Add Category",
                             style: TextStyle(
                                 fontSize: 20.0,

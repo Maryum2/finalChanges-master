@@ -8,6 +8,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'dart:io';
 import 'package:image_picker/image_picker.dart';
+import 'package:shimmer/shimmer.dart';
 
 
 
@@ -152,8 +153,8 @@ class _UploadLogoPageState extends State<UploadLogoPage> {
               ),
             ),
       body:
-            SingleChildScrollView(
-              child: Container(
+
+               Container(
                 height:651.0,
                 decoration: new BoxDecoration(
                   image: DecorationImage(
@@ -168,7 +169,12 @@ class _UploadLogoPageState extends State<UploadLogoPage> {
                       children: <Widget>[
                         SizedBox(height:300,),
                         new Center(
-                          child: Text('Select an image'),
+                          child: Text('Select an image',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 15.0,
+                            ),
+                          ),
                         ),
                         SizedBox(height: 265,),
                         RaisedButton(
@@ -181,14 +187,21 @@ class _UploadLogoPageState extends State<UploadLogoPage> {
                                 width: 1.0, //width of the border
                               ),
                             ),
+                          child:Shimmer.fromColors(
+                              period: Duration(milliseconds: 1500),
+                              baseColor: Colors.white,
+                              highlightColor: Colors.tealAccent,
                             child: Text(
                               'Select',
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 20.0,
-                                  color: Colors.white),
+                                 // color: Colors.white,
+                                fontFamily:'Pacifico',
+                              ),
                             ),
-                            elevation: 20.0,
+                          ),
+                            elevation: 10.0,
                             //splashColor: Colors.black12,
                             color: Colors.teal,
                             onPressed: () {
@@ -204,7 +217,7 @@ class _UploadLogoPageState extends State<UploadLogoPage> {
                 ),
               ),
             ),
-    ));
+    );
   }
 
   Widget enableUpload(){
@@ -226,13 +239,21 @@ class _UploadLogoPageState extends State<UploadLogoPage> {
                     width: 2.0, //width of the border
                   ),
                 ),
+
+              child:Shimmer.fromColors(
+                  period: Duration(milliseconds: 1500),
+                  baseColor: Colors.white,
+                  highlightColor: Colors.tealAccent,
                 child: Text(
                   'Upload',
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 25.0,
-                      color: Colors.white),
-                ),
+                      fontFamily:'Pacifico',
+                  //    color: Colors.white
+
+                  ),
+                ),),
                 elevation: 10.0,
                 //splashColor: Colors.black12,
                 color: Colors.teal,

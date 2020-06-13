@@ -9,6 +9,7 @@ import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
+import 'package:shimmer/shimmer.dart';
 
 import 'ViewProfile.dart';
 
@@ -149,8 +150,8 @@ class _PortfolioState extends State<Portfolio> {
 
             ),
       body:
-      SingleChildScrollView(
-        child: Container(
+
+       Container(
           height:651.0,
           decoration: new BoxDecoration(
             image: DecorationImage(
@@ -178,14 +179,20 @@ class _PortfolioState extends State<Portfolio> {
                           width: 1.0, //width of the border
                         ),
                       ),
+                    child:Shimmer.fromColors(
+                        period: Duration(milliseconds: 1500),
+                        baseColor: Colors.white,
+                        highlightColor: Colors.tealAccent,
                       child: Text(
                         'Select',
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 20.0,
-                            color: Colors.white),
-                      ),
-                      elevation: 20.0,
+                            fontFamily:'Pacifico',
+                            //color: Colors.white
+                        ),
+                      ),),
+                      elevation: 10.0,
                       //splashColor: Colors.black12,
                       color: Colors.teal,
                       onPressed: () {
@@ -199,7 +206,7 @@ class _PortfolioState extends State<Portfolio> {
           ),
         ),
       ),
-    ));
+    );
 
   }
 
@@ -228,13 +235,19 @@ class _PortfolioState extends State<Portfolio> {
                             width: 2.0, //width of the border
                           ),
                         ),
+                      child:Shimmer.fromColors(
+                          period: Duration(milliseconds: 1500),
+                          baseColor: Colors.white,
+                          highlightColor: Colors.tealAccent,
                         child: Text(
                           'Upload',
                           style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 25.0,
-                              color: Colors.white),
-                        ),
+                              fontFamily:'Pacifico',
+                          //    color: Colors.white
+                          ),
+                        ),),
                         elevation: 10.0,
                         //splashColor: Colors.black12,
                         color: Colors.teal,

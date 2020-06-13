@@ -5,6 +5,7 @@ import 'package:ajeeb/services/auth.dart';
 
 import 'package:ajeeb/shared/loading.dart';
 import 'package:flutter/material.dart';
+import 'package:shimmer/shimmer.dart';
 
 
 
@@ -168,14 +169,21 @@ class _SignInState extends State<SignIn> {
                         SizedBox(height: 20.0),
                         RaisedButton(
                             color: Colors.teal,
-                            child: Text(
+                          child:Shimmer.fromColors(
+                              period: Duration(milliseconds: 1500),
+                              baseColor: Colors.white,
+                              highlightColor: Colors.tealAccent,
+
+
+                              child: Text(
                               'Sign In',
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 20.0,
+                                  fontFamily:'Pacifico',
                                   color: Colors.white),
                             ),
-
+                          ),
                             elevation: 10.0,
 
                             shape: new RoundedRectangleBorder(
@@ -261,12 +269,19 @@ class _SignInState extends State<SignIn> {
                                       borderRadius: new BorderRadius.circular(15.0),
                                     ),
                                     textColor: Colors.white,
+                                      child:Shimmer.fromColors(
+                                        period: Duration(milliseconds: 1500),
+                                        baseColor: Colors.white,
+                                        highlightColor: Colors.tealAccent,
+
                                     child: const Text('Sign Up!',
                                       style: TextStyle(
                                           fontWeight: FontWeight.bold,
                                           fontSize: 20.0,
+                                          fontFamily:'Pacifico',
                                           color: Colors.white),
                                     ),
+                                      ),
                                     elevation: 10.0,
 
 

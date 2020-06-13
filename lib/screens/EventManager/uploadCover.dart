@@ -8,6 +8,7 @@ import 'package:firebase_storage/firebase_storage.dart';
 import 'dart:io';
 import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
+import 'package:shimmer/shimmer.dart';
 
 //
 //void main() {
@@ -155,8 +156,8 @@ class _UploadCoverPageState extends State<UploadCoverPage> {
                     ),
                   ),
             body:
-                  SingleChildScrollView(
-                    child: Container(
+
+                    Container(
                       height:651.0,
                       decoration: new BoxDecoration(
                         image: DecorationImage(
@@ -171,7 +172,11 @@ class _UploadCoverPageState extends State<UploadCoverPage> {
                             children: <Widget>[
                               SizedBox(height: 300,),
                               new Center(
-                                child: Text('Select an image'),
+                                child: Text('Select an image',
+                                  style:TextStyle(
+                                    fontSize: 15.0,
+                                  )
+                                ),
                               ),
                               SizedBox(height: 265,),
                               RaisedButton(
@@ -184,14 +189,20 @@ class _UploadCoverPageState extends State<UploadCoverPage> {
                                       width: 1.0, //width of the border
                                     ),
                                   ),
+                                child:Shimmer.fromColors(
+                                    period: Duration(milliseconds: 1500),
+                                    baseColor: Colors.white,
+                                    highlightColor: Colors.tealAccent,
                                   child: Text(
                                     'Select',
                                     style: TextStyle(
+                                        fontFamily:'Pacifico',
                                         fontWeight: FontWeight.bold,
                                         fontSize: 20.0,
                                         color: Colors.white),
-                                  ),
-                                  elevation: 20.0,
+                                  ),)
+                                  ,
+                                  elevation: 10.0,
                                   //splashColor: Colors.black12,
                                   color: Colors.teal,
                                   onPressed: () {
@@ -205,7 +216,7 @@ class _UploadCoverPageState extends State<UploadCoverPage> {
                       ),
                     ),
                   ),
-          ));
+          );
 
 
 
@@ -238,13 +249,18 @@ class _UploadCoverPageState extends State<UploadCoverPage> {
                                 width: 2.0, //width of the border
                               ),
                             ),
+                          child:Shimmer.fromColors(
+                              period: Duration(milliseconds: 1500),
+                              baseColor: Colors.white,
+                              highlightColor: Colors.tealAccent,
                             child: Text(
                               'Upload',
                               style: TextStyle(
+                                  fontFamily:'Pacifico',
                                   fontWeight: FontWeight.bold,
                                   fontSize: 25.0,
                                   color: Colors.white),
-                            ),
+                            ),),
                             elevation: 10.0,
                             //splashColor: Colors.black12,
                             color: Colors.teal,

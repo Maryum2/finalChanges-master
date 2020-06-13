@@ -32,6 +32,9 @@ dependencies:
   cached_network_image: ^2.2.0
   smooth_star_rating: 1.0.3
   firebase_storage:
+  shared_preferences:
+  after_layout: ^1.0.7+2
+  carousel_slider: ^1.3.0
   flutter:
     sdk: flutter
 
@@ -147,6 +150,12 @@ flutter:
     - assets/background15.jpg
     - assets/background16.jpg
     - assets/welcome1.jpg
+    - assets/c1.jpg
+    - assets/c2.jpg
+    - assets/c3.jpg
+    - assets/c4.jpg
+    - assets/c5.jpg
+    - assets/arrow.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

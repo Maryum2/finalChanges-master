@@ -9,6 +9,7 @@ import 'package:ajeeb/screens/Customer/ViewListTileProfile.dart';
 import 'package:ajeeb/services/auth.dart';
 import 'package:ajeeb/screens/EventManager/Nearest.dart';
 import 'package:provider/provider.dart';
+import 'package:shimmer/shimmer.dart';
 
 import '../AboutUs.dart';
 import '../Ratings.dart';
@@ -183,11 +184,17 @@ class _HomeCustState extends State<HomeCust> {
                           Icons.directions_run,
                           color: Colors.white,
                         ),
-                        label: Text('Nearest',
+                       label: Shimmer.fromColors(
+                          period: Duration(milliseconds: 1500),
+                          baseColor: Colors.white,
+                          highlightColor: Colors.tealAccent,
+                        child: Text('Nearest',
                             style: TextStyle(
                               color: Colors.white,
+                              fontFamily:'Pacifico',
                             )),
                       ),
+                      )
     //                  RaisedButton.icon(
     //                    onPressed: () {},
     //                    shape: new RoundedRectangleBorder(

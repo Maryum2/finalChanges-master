@@ -34,7 +34,7 @@ class MyApp1 extends State<AddReview> {
           Container (
             decoration: new BoxDecoration(
               image: DecorationImage(
-                  fit: BoxFit.cover,
+                  fit: BoxFit.fill,
                   image: AssetImage('assets/background15.jpg')),
             ),
             //margin: EdgeInsets.only(top:30.0,left:10,right:10),

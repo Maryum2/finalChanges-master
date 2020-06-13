@@ -9,6 +9,7 @@ import 'package:ajeeb/authenticate/signInEvent.dart';
 import 'package:provider/provider.dart';
 
 import 'package:ajeeb/screens/Customer/main.dart';
+import 'package:shimmer/shimmer.dart';
 import 'EventManager/homeEvent.dart';
 import 'EventManager/main2.dart';
 
@@ -42,9 +43,9 @@ class CustEvent extends StatelessWidget {
             body: Container(
                 decoration: new BoxDecoration(
                   image: DecorationImage(
-                      fit: BoxFit.cover, image: AssetImage('assets/background15.jpg')),
+                      fit: BoxFit.fill, image: AssetImage('assets/background15.jpg')),
                 ),
-                child: SingleChildScrollView(
+
                   child: Center(
                       child: Column(
                         children: <Widget>[
@@ -55,6 +56,7 @@ class CustEvent extends StatelessWidget {
                             // margin:  EdgeInsets.all(4.0),
                             height: 60.0,
                             width: 225.0,
+
                             child: RaisedButton(
                               shape: new RoundedRectangleBorder(
                                 borderRadius: new BorderRadius.circular(15.0),
@@ -73,11 +75,26 @@ class CustEvent extends StatelessWidget {
                                     }));
 
                               },
-                              child: Text("LogIn as Event Manager",
+                              child:Shimmer.fromColors(
+                                period: Duration(milliseconds: 1500),
+                                baseColor: Colors.white,
+                                highlightColor: Colors.tealAccent,
+                                    child: Text("LogIn as Event Manager",
                                   style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 20.0,
-                                  )),
+                                      fontFamily:'Pacifico',
+//                                      shadows: <Shadow>[
+//                                        Shadow(
+//                                            blurRadius: 18.0,
+//                                            color: Colors.black87,
+//                                            offset: Offset.fromDirection(120, 12)
+//                                        )
+//                                      ]
+                                  )
+                                    ),
+
+                              ),
                               elevation: 10.0,
                               //splashColor: Colors.black12,
                               color: Colors.teal,
@@ -108,11 +125,25 @@ class CustEvent extends StatelessWidget {
                                     }));
 
                               },
+
+                              child:Shimmer.fromColors(
+                                period: Duration(milliseconds: 1500),
+                                baseColor: Colors.white,
+                                highlightColor: Colors.tealAccent,
                               child: Text("LogIn as Customer",
                                   style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 20.0,
+                                      fontFamily:'Pacifico',
+//                                      shadows: <Shadow>[
+//                                        Shadow(
+//                                            blurRadius: 18.0,
+//                                            color: Colors.black87,
+//                                            offset: Offset.fromDirection(120, 12)
+//                                        )
+//                                      ]
                                   )),
+                              ),
                               elevation: 10.0,
                               //splashColor: Colors.black12,
                               color: Colors.teal,
@@ -121,6 +152,6 @@ class CustEvent extends StatelessWidget {
                           SizedBox(height: 250.0,)
                         ],
                       )),
-                ))));
+                )));
   }
 }

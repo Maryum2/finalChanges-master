@@ -27,7 +27,7 @@ class Rate extends StatelessWidget {
             body: Container(
                 decoration: new BoxDecoration(
                   image: DecorationImage(
-                      fit: BoxFit.cover,
+                      fit: BoxFit.fill,
                       image: AssetImage('assets/background15.jpg')),
                 ),
                 child: Center(
