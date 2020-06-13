@@ -10,6 +10,10 @@ import 'package:ajeeb/services/auth.dart';
 import 'package:ajeeb/screens/EventManager/Nearest.dart';
 import 'package:provider/provider.dart';
 
+import '../AboutUs.dart';
+import '../Ratings.dart';
+import '../Reviews.dart';
+
 //void main() => runApp(MaterialApp(
 //    debugShowCheckedModeBanner: false,
 //    title: 'AppBar Scaffold',
@@ -119,27 +123,27 @@ class _HomePageState extends State<HomePage> {
                         leading: Icon(Icons.people),
                         title: new Text("About us"),
                         onTap: () {
-//                  Navigator.push(context, MaterialPageRoute(builder: (context) {
-//                    return About();
-//                  }));
+                          Navigator.push(context, MaterialPageRoute(builder: (context) {
+                            return About();
+                          }));
                         },
                       ),
                       new ListTile(
                         leading: Icon(Icons.comment),
                         title: new Text("Reviews"),
                         onTap: () {
-//                  Navigator.push(context, MaterialPageRoute(builder: (context) {
-//                    return AddReview();
-//                  }));
+                            Navigator.push(context, MaterialPageRoute(builder: (context) {
+                              return AddReview();
+                            }));
                         },
                       ),
                       new ListTile(
                         leading: Icon(Icons.star),
                         title: new Text("Ratings"),
                         onTap: () {
-//                  Navigator.push(context, MaterialPageRoute(builder: (context) {
-//                    return Rate();
-//                  }));
+                            Navigator.push(context, MaterialPageRoute(builder: (context) {
+                              return Rate();
+                            }));
                         },
                       ),
                       new ListTile(
@@ -150,15 +154,6 @@ class _HomePageState extends State<HomePage> {
                               context) {
                             return View();
                           }));
-                        },
-                      ),
-                      new ListTile(
-                        leading: Icon(Icons.edit),
-                        title: new Text("Edit Credentials"),
-                        onTap: () {
-//                  Navigator.push(context, MaterialPageRoute(builder: (context) {
-//                    return EditCredentials();
-//                  }));
                         },
                       ),
                       new ListTile(
