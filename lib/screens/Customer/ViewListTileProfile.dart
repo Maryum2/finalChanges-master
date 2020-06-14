@@ -76,6 +76,73 @@ class _ProfilePageState extends State<ProfilePage> {
                 title: new Text('Penta Events'),
                 backgroundColor: Colors.teal,
               ),
+                drawer: new Drawer(
+                  child: new ListView(
+                    children: <Widget>[
+                      new UserAccountsDrawerHeader(
+                        decoration: BoxDecoration(color: Colors.teal),
+                        accountName: new Text('Harper'),
+                        accountEmail: new Text('harper@gmail.com'),
+                        currentAccountPicture: new GestureDetector(
+                          child: new CircleAvatar(
+                            backgroundImage: AssetImage('assets/cust.jpg'),
+                          ),
+                        ),
+                      ),
+                      new ListTile(
+                        leading: new Icon(Icons.chrome_reader_mode),
+                        title: new Text('Booking'),
+//                        onTap: () {
+//                          Navigator.push(context, MaterialPageRoute(builder: (context) {
+//
+//                            return MyBooking(this.document.data["Event_id"]);
+//                          }));
+//                        },
+                      ),
+                      new ListTile(
+                        leading: new Icon(Icons.category),
+                        title: new Text('Categories'),
+//                        onTap: () {
+//                          Navigator.push(context, MaterialPageRoute(builder: (context) {
+//                            return MyCategory(this.document.data["Event_id"]);
+//                          }));
+//                        },
+                      ),
+                      //      new ListTile(
+                      //        leading: new Icon(Icons.packages),
+                      //        title: new Text('Packages'),
+                      //      ),
+                      new ListTile(
+                        leading: new Icon(Icons.color_lens),
+                        title: new Text('Themes'),
+//                        onTap: () {
+//                          Navigator.push(context, MaterialPageRoute(builder: (context) {
+//                            return MyThemes(this.document.data["Event_id"]);
+//                          }));
+//                        },
+                      ),
+                      new ListTile(
+                        leading: new Icon(Icons.calendar_today),
+                        title: new Text('Services'),
+//                        onTap: () {
+//                          Navigator.push(context, MaterialPageRoute(builder: (context) {
+//                            return Services(this.document.data["Event_id"]);
+//                          }));
+//                        },
+                      ),
+                      /*new ListTile(
+                                      leading: new Icon(Icons.edit),
+                                      title: new Text('Edit Profile'),
+                                      onTap: () {
+                                        Navigator.push(context, MaterialPageRoute(builder: (context) {
+                                          return EditCredentials();
+                                        }));
+                                      },
+
+                                    )*/
+                    ],
+                  ),
+                ),
 
 
           body:  Container(

@@ -50,21 +50,20 @@ class CustEvent extends StatelessWidget {
                       child: Column(
                         children: <Widget>[
                           Container(
-                            margin:
-                            EdgeInsets.only(top: 240.0, left: 25.0, right: 25.0,),
-                            // alignment:Alignment.bottomCenter,
+                            margin: EdgeInsets.only(top: 240.0, left: 25.0, right: 25.0,),
+                            //alignment:Alignment.center,
                             // margin:  EdgeInsets.all(4.0),
-                            height: 60.0,
+                            height: 55.0,
                             width: 225.0,
 
                             child: RaisedButton(
                               shape: new RoundedRectangleBorder(
                                 borderRadius: new BorderRadius.circular(15.0),
-//                                side: BorderSide(
-//                                 // color: Colors.tealAccent, //Color of the border
-//                                  style: BorderStyle.solid, //Style of the border
-//                                  width: 2.0, //width of the border
-//                                ),
+                                side: BorderSide(
+                                  color: Colors.white, //Color of the border
+                                  style: BorderStyle.solid, //Style of the border
+                                  width: 1.0, //width of the border
+                                ),
                               ),
                               textColor: Colors.white,
                               onPressed: () {
@@ -75,15 +74,11 @@ class CustEvent extends StatelessWidget {
                                     }));
 
                               },
-                              child:Shimmer.fromColors(
-                                period: Duration(milliseconds: 1500),
-                                baseColor: Colors.white,
-                                highlightColor: Colors.tealAccent,
-                                    child: Text("LogIn as Event Manager",
+                              child:Text("LogIn as Event Manager",
                                   style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20.0,
-                                      fontFamily:'Pacifico',
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20.0,
+                                fontFamily:'Pacifico',
 //                                      shadows: <Shadow>[
 //                                        Shadow(
 //                                            blurRadius: 18.0,
@@ -92,8 +87,6 @@ class CustEvent extends StatelessWidget {
 //                                        )
 //                                      ]
                                   )
-                                    ),
-
                               ),
                               elevation: 10.0,
                               //splashColor: Colors.black12,
@@ -110,11 +103,11 @@ class CustEvent extends StatelessWidget {
                             child: RaisedButton(
                               shape: new RoundedRectangleBorder(
                                 borderRadius: new BorderRadius.circular(15.0),
-//                                side: BorderSide(
-//                                  color: Colors.tealAccent, //Color of the border
-//                                  style: BorderStyle.solid, //Style of the border
-//                                  width: 2.0, //width of the border
-//                                ),
+                                side: BorderSide(
+                                  color: Colors.white, //Color of the border
+                                  style: BorderStyle.solid, //Style of the border
+                                  width: 1.0, //width of the border
+                                ),
                               ),
                               textColor: Colors.white,
                               onPressed: () {
@@ -126,11 +119,7 @@ class CustEvent extends StatelessWidget {
 
                               },
 
-                              child:Shimmer.fromColors(
-                                period: Duration(milliseconds: 1500),
-                                baseColor: Colors.white,
-                                highlightColor: Colors.tealAccent,
-                              child: Text("LogIn as Customer",
+                              child:Text("LogIn as Customer",
                                   style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 20.0,
@@ -143,7 +132,6 @@ class CustEvent extends StatelessWidget {
 //                                        )
 //                                      ]
                                   )),
-                              ),
                               elevation: 10.0,
                               //splashColor: Colors.black12,
                               color: Colors.teal,

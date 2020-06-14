@@ -168,20 +168,14 @@ class _SignInEventState extends State<SignInEvent> {
                         RaisedButton(
                             color: Colors.teal,
 
-                          child:Shimmer.fromColors(
-                              period: Duration(milliseconds: 1500),
-                              baseColor: Colors.white,
-                              highlightColor: Colors.tealAccent,
-
-                              child: Text(
-                              'Sign In',
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 20.0,
-                                  fontFamily:'Pacifico',
-                                  color: Colors.white),
+                          child:Text(
+                          'Sign In',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20.0,
+                              fontFamily:'Pacifico',
+                              color: Colors.white),
                             ),
-                          ),
                             elevation: 10.0,
 
                             shape: new RoundedRectangleBorder(
@@ -237,20 +231,13 @@ class _SignInEventState extends State<SignInEvent> {
                                     ),
                                     textColor: Colors.white,
 
-                                      child:Shimmer.fromColors(
-                                        period: Duration(milliseconds: 1500),
-                                        baseColor: Colors.white,
-                                        highlightColor: Colors.tealAccent,
-
-
-                                        child: const Text('Sign Up!',
+                                      child:const Text('Sign Up!',
                                       style: TextStyle(
-                                          fontFamily:'Pacifico',
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 20.0,
-                                          color: Colors.white),
+                                        fontFamily:'Pacifico',
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 20.0,
+                                        color: Colors.white),
                                     ),
-                                      ),
                                     elevation: 10.0,
 
 

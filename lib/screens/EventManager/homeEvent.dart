@@ -11,6 +11,7 @@ import 'package:ajeeb/screens/EventManager/Nearest.dart';
 import 'package:provider/provider.dart';
 
 import '../AboutUs.dart';
+import '../ContactUs.dart';
 import '../Ratings.dart';
 import '../Reviews.dart';
 
@@ -114,9 +115,9 @@ class _HomePageState extends State<HomePage> {
                         leading: Icon(Icons.phone_in_talk),
                         title: new Text("Contact us"),
                         onTap: () {
-//                  Navigator.push(context, MaterialPageRoute(builder: (context) {
-//                    return Contact();
-//                  }));
+                          Navigator.push(context, MaterialPageRoute(builder: (context) {
+                            return Contact();
+                          }));
                         },
                       ),
                       new ListTile(

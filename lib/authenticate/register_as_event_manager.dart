@@ -123,6 +123,7 @@ class _RegisterAsEventManagerState extends State<RegisterAsEventManager> {
               ),
               body: SingleChildScrollView(
                 child: Container(
+                  height: 652.0,
                   decoration: new BoxDecoration(
                     image: DecorationImage(
                         fit: BoxFit.cover, image: AssetImage('assets/background15.jpg')),
@@ -133,7 +134,7 @@ class _RegisterAsEventManagerState extends State<RegisterAsEventManager> {
                     child: Column(children: <Widget>[
                       Container(
                         width: MediaQuery.of(context).size.width,
-                        margin: EdgeInsets.only(top: 140),
+                        margin: EdgeInsets.only(top: 90),
 //
 
                         child: Row(children: <Widget>[
@@ -576,7 +577,7 @@ class _RegisterAsEventManagerState extends State<RegisterAsEventManager> {
 
 
 
-                      SizedBox(height: 120.0),
+                      SizedBox(height: 80.0),
                       RaisedButton(
                         //color: Colors.teal[400],
                           shape: new RoundedRectangleBorder(
@@ -587,19 +588,13 @@ class _RegisterAsEventManagerState extends State<RegisterAsEventManager> {
                               width: 2.0, //width of the border
                             ),
                           ),
-                          child:Shimmer.fromColors(
-                              period: Duration(milliseconds: 1500),
-                              baseColor: Colors.white,
-                              highlightColor: Colors.tealAccent,
-
-                          child: Text(
+                          child:Text(
                             'Sign Up',
                             style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 20.0,
                                 fontFamily:'Pacifico',
                                 color: Colors.white),
-                          ),
                           ),
                           elevation: 10.0,
                           //splashColor: Colors.black12,
